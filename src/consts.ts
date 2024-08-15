@@ -79,10 +79,17 @@ export const menuItems = [
   }, // Friends page
   {
     id: "contact",
-    text: "联系",
-    href: "mailto:contact.3795199897@qq.com", // Contact email
+    text: "邮件",
+    href: "mailto:contact.AuroraFO-work@outlook.com", // Contact email
     target: "_blank", // Open in a new tab
     svg: "contact",
+  },
+  {
+    id: "thanks",
+    text: "感谢",
+    href: "/thanks",
+    svg: "friend",
+    target: "_self",
   },
 ];
 
