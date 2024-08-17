@@ -78,17 +78,10 @@ export const menuItems = [
     target: "_self",
   }, // Friends page
   {
-    id: "contact",
-    text: "邮件",
-    href: "mailto:contact.AuroraFO-work@outlook.com", // Contact email
-    target: "_blank", // Open in a new tab
-    svg: "contact",
-  },
-  {
     id: "thanks",
     text: "感谢",
     href: "/thanks",
-    svg: "friend",
+    svg: "thanks",
     target: "_self",
   },
 ];
@@ -96,10 +89,10 @@ export const menuItems = [
 // Social media and contact icons
 export const socialIcons = [
   {
-    href: "https://afdian.net/a/saroprock",
-    ariaLabel: "Support my work",
-    title: "Support my work",
-    svg: "support",
+    href: "mailto:contact.N-wind@outlook.com",
+    ariaLabel: "Mail",
+    title: "Mail",
+    svg: "contact",
   },
   {
     href: "https://github.com/AuroraFO",
@@ -114,9 +107,9 @@ export const socialIcons = [
     svg: "bilibili",
   },
   {
-    href: "/rss.xml",
-    ariaLabel: "RSS Feed",
-    title: "RSS Feed",
-    svg: "rss",
+    href: "https://blog.csdn.net/YIN_Northwind?spm=1010.2135.3001.5343",
+    ariaLabel: "CSDN",
+    title: "CSDN",
+    svg: "csdn",
   },
 ];
