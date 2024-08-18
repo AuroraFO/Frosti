@@ -49,7 +49,7 @@ export const menuItems = [
       }, // All blog
       {
         id: "tech",
-        text: "科技博客",
+        text: "技术博客",
         href: "/blog/categories/tech",
         svg: "cube",
         target: "_self",
