@@ -22,6 +22,7 @@ import LinkCard from "../../components/page/LinkCard.astro";
 
 <LinkCard
   title="作者：AuroraFater"
+  desc="欢迎转载本博客文章，但请注明来源并附上原文链接。"
   img="/favicon.ico"
 />
 
@@ -33,135 +34,60 @@ import LinkCard from "../../components/page/LinkCard.astro";
 
 **栈**，又名堆栈（stack）。作为一种数据结构，它是一种只能在一端进行插入和删除操作的特殊**线性表**。
 
-想象一下，我们用一个大箱子来堆积物品，先堆进来的压在最底下，随后一件件物品往上堆。而取走时，也只能从最上面开始拿。栈也是如此，它就是一种类似箱子堆积物品的数据结构，先放最晚拿，后放最早拿。
+想象一下，我们用一个大箱子来堆积物品，先堆进来的压在最底下，随后一件件物品往上堆。而取走时，也只能从最上面开始拿。栈也是如此，它就是一种类似箱子堆积物品的数据结构，**先放最晚拿，后放最早拿**。
 
 箱子（栈）的最上面我们称之为栈顶（top），允许插入（push）和删除（pop），删完了，也就是栈底就是栈顶的时候，就叫空栈。而最下面称之为栈底（Bottom），什么也不能干。
 
-口诀：**“先进后出，后进先出。”**
+栈的口诀：**“先进后出，后进先出。”**
 
-上面说过，栈是一种特殊线性表，那么它同样有顺序存储和链式存储。
+![进栈与出栈](https://s3.bmp.ovh/imgs/2024/08/18/fcdf8b9bed7b0286.jpg)
 
-顺序存储：顺序存储的栈叫做顺序栈。顺序栈使用数组实现，下标为0的一端作为栈底，使用top做为栈顶，它来指示当前栈顶元素的位置，**默认top = -1时为空栈**。
+上面说过，栈是一种特殊线性表，那么它有顺序存储和链式存储。
+
+顺序存储：顺序存储的栈叫做顺序栈。顺序栈使用数组实现，这样我们会更好理解。以数组下标为0的一端作为栈底，使用top做为栈顶，它来指示当前栈顶元素的位置，**默认top = -1时为空栈**。
 
 链式存储：链式存储的栈叫做链栈。链栈用单链表实现，一般尾节点为栈底，使用头指针指向的节点作为栈顶，不需要头节点。**top = null时为空栈**。
 
 而顺序栈的元素个数是固定值，存在栈满的情况，链式栈则没有栈满的情况，除非内存要爆：（
 
-补充一下：入栈操作与出栈操作时间复杂度和空间复杂度都为O(1)。
-
 <Warning>然而，在进栈前首先要检查栈是否已满，满则溢出；而退栈前也要先检查是否为空栈，空则下溢。</Warning>
 
-因为栈空间是有限的，如果栈已满，在进行入栈操作时，就会产生”上溢“。上溢将使程序无法继续运行，我们要想办法避免。而对于出栈操作中的“下溢”，程序中仅会给出一个标志信息。
+因为栈空间是有限的，如果栈已满，在进行入栈操作时，就会产生”上溢“。上溢将使程序无法继续运行，我们要想办法避免。而对于出栈操作中的“下溢”，程序中仅会给出一个标志信息，我们无需过度在意。
 
-![进栈与出栈](/public\stack.jpg)
+## 二、什么是队列？
 
-## 二、基本操作
+队列也是一种特殊的线性表。和栈一样，队列是一种操作受限制的线性表。允许进行插入操作的一端称为队尾（tail），而允许进行删除操作的一端称为队首（head）。
 
-### Getting started
+同样想象一下，我们去食堂吃饭时，先排队的最先打到饭吃，而晚来的也晚吃，也就是我们俗称的“先到先得”。（插队除外！）
 
-First you need to create an `mdx` file, which is as simple as changing the extension to `.mdx`.
+队列口诀：**“先进先出，后进后出。”**
 
-### Introducing
+![队列的进出](https://s3.bmp.ovh/imgs/2024/08/19/4783d349810e9f7f.jpg)
 
-The components provided by Frosti are placed in the `/blog` and `/page` folders. Write something in the document properties (frontmatter):
+同为线性表，队列也有分为链式存储和顺序存储。
 
-```astro
-import Collapse from "../../components/blog/collapse.astro";
-import Diff from "../../components/blog/diff.astro";
-import Error from "../../components/blog/error.astro";
-import Info from "../../components/blog/info.astro";
-import Kbd from "../../components/blog/kbd.astro";
-import Success from "../../components/blog/success.astro";
-import Warning from "../../components/blog/warning.astro";
-import TimeLine from "../../components/page/TimeLine.astro";
-import LinkCard from "../../components/page/LinkCard.astro";
-```
+顺序存储的队列同样可以用数组实现。数组下标为0的一端为队头，用head指向，队尾用tail指向。当head = tail，队列为空队列。
 
-### Example
+我先来举个例子：我们来定义个数组a[11]。令下标0、1、2空出，入队数组其他位置。当最后一个元素被占时，此时进行入队操作的话，数组就越界了，即为“上溢”。可这个数组明明没满，前面还空着三个位置呢。我们将这种溢出称为“假溢出”。
 
-#### Collapse
+为了克服这种现象，我们可以使用基于数组的循环队列，或者是基于链表的队列。可是我不推荐最后一种方法，因为其更为复杂且浪费时间。
 
-<Collapse title="This is an example text.">
-  This is the hidden content!
-</Collapse>
+【循环队列】
 
-```astro
-<Collapse title="This is an example text.">
-  This is the hidden content!
-</Collapse>
-```
+循环队列，就是队列的队头和队尾相接的顺序存储结构。
 
-#### Diff
+如果是循环队列的话，当队列满了，tail不需要等于n，而是直接指向了下标为0的位置。
 
-<Diff r="/r.png" l="/l.png"></Diff>
+如果此时要执行入队操作，那就会变成一个连在一起的圆圈。
 
-```astro
-<Diff r="/r.png" l="/l.png"></Diff>
-```
+如果想更直观一些，我可以把它掰弯了给大家看。
 
-#### Error
+![循环队列](https://s3.bmp.ovh/imgs/2024/08/19/a8a9785f39aa508d.jpg)
 
-<Error>Maybe something went wrong? </Error>
+看！这样就完美解决了！
 
-```astro
-<Error>Maybe something went wrong? </Error>
-```
+在后面的“约瑟夫环问题”中，我们也会用到循环队列的相关知识。由于本篇博客仅作初步认识，大家了解即可。
 
-#### Warning
+<Info>记：判断队列满的条件：**(tail + 1) % n = head。**</Info>
 
-<Warning>Hey! Watch out for potholes! </Warning>
-
-```astro
-<Warning>Hey! Watch out for potholes! </Warning>
-```
-
-#### Message
-
-<Info>It's just a message. </Info>
-
-```astro
-<Info>It's just a message. </Info>
-```
-
-#### Success
-
-<Success>Congratulations on your successful deployment! </Success>
-
-```astro
-<Success>Congratulations on your successful deployment! </Success>
-```
-
-#### Kbd
-
-<Kbd>Ctrl</Kbd> + <Kbd>C</Kbd> to copy the text.
-
-```astro
-<Kbd>Ctrl</Kbd> + <Kbd>C</Kbd> to copy the text.
-```
-
-#### TimeLine
-
-<TimeLine
-  items={[
-    { year: "1984", event: "First Macintosh computer" },
-    { year: "1998", event: "iMac" },
-    { year: "2001", event: "iPod" },
-    { year: "2007", event: "iPhone" },
-    { year: "2015", event: "Apple Watch" },
-  ]}
-/>
-
-```astro
-<TimeLine
-  items={[
-    { year: "1984", event: "First Macintosh computer" },
-    { year: "1998", event: "iMac" },
-    { year: "2001", event: "iPod" },
-    { year: "2007", event: "iPhone" },
-    { year: "2015", event: "Apple Watch" },
-  ]}
-/>
-
-OK，以上就是今天要讲的内容。我会尽快更新下一章。大家拜拜！
-
-```
+OK，以上就是今天要讲的内容。大家喜欢就点个赞吧，我会尽快更新下一章。ヾ(•ω•`)o！

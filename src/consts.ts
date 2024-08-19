@@ -22,7 +22,7 @@ export const infoTest = {
   tagCard: "标签",
   tagPage: "Tag - ",
   noCategory: "uncategorized",
-  categoryCard: "类别",
+  categoryCard: "分类",
   categoryPage: "Category - ",
   link: "Link: ",
   prevPage: "Recent posts",
