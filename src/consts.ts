@@ -2,13 +2,13 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 // Site title and description
-export const SITE_TAB = "AuroraFO";
-export const SITE_TITLE = "AuroraFO";
+export const SITE_TAB = "AuroraFater";
+export const SITE_TITLE = "AuroraFater";
 export const SITE_DESCRIPTION = "A blog template";
 export const DATE_FORMAT = "ddd MMM DD YYYY";
 
 // User profile information
-export const USER_NAME = "AuroraFO";
+export const USER_NAME = "AuroraFater";
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
@@ -19,10 +19,10 @@ export const TRANSITION_API = true;
 export const infoTest = {
   tag: "Tag: ",
   noTag: "untagged",
-  tagCard: "Tags",
+  tagCard: "标签",
   tagPage: "Tag - ",
   noCategory: "uncategorized",
-  categoryCard: "Categories",
+  categoryCard: "类别",
   categoryPage: "Category - ",
   link: "Link: ",
   prevPage: "Recent posts",
