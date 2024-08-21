@@ -95,7 +95,7 @@ export const socialIcons = [
     svg: "contact",
   },
   {
-    href: "https://github.com/AuroraFO",
+    href: "https://github.com/AuroraFater",
     ariaLabel: "Github",
     title: "Github",
     svg: "github",
