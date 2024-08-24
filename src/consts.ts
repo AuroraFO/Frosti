@@ -25,8 +25,8 @@ export const infoTest = {
   categoryCard: "分类",
   categoryPage: "Category - ",
   link: "Link: ",
-  prevPage: "Recent posts",
-  nextPage: "Older posts",
+  prevPage: "上一页",
+  nextPage: "下一页",
 };
 
 // Menu items for navigation
