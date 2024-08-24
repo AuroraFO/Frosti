@@ -9,8 +9,8 @@ import { infoTest } from "../../consts";
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   const posts = await getCollection("blog");
-  const topPosts = posts.filter((post) => post.data.badge === "Pin");
-  const otherPosts = posts.filter((post) => post.data.badge !== "Pin");
+  const topPosts = posts.filter((post) => post.data.badge === "置顶");
+  const otherPosts = posts.filter((post) => post.data.badge !== "置顶");
 
   topPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
   otherPosts.sort(
