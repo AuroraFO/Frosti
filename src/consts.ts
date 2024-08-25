@@ -89,7 +89,7 @@ export const menuItems = [
 // Social media and contact icons
 export const socialIcons = [
   {
-    href: "mailto:contact.N-wind@outlook.com",
+    href: "mailto:3795199897@qq.com",
     ariaLabel: "Mail",
     title: "Mail",
     svg: "contact",
