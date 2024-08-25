@@ -2,13 +2,13 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 // Site title and description
-export const SITE_TAB = "AuroraFater";
-export const SITE_TITLE = "AuroraFater";
+export const SITE_TAB = "Yinph";
+export const SITE_TITLE = "Yinph";
 export const SITE_DESCRIPTION = "A blog template";
 export const DATE_FORMAT = "ddd MMM DD YYYY";
 
 // User profile information
-export const USER_NAME = "AuroraFater";
+export const USER_NAME = "Yinph";
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
@@ -95,7 +95,7 @@ export const socialIcons = [
     svg: "contact",
   },
   {
-    href: "https://github.com/AuroraFater",
+    href: "https://github.com/Aurora-Yinph",
     ariaLabel: "Github",
     title: "Github",
     svg: "github",
