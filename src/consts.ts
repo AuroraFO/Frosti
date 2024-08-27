@@ -107,9 +107,9 @@ export const socialIcons = [
     svg: "bilibili",
   },
   {
-    href: "https://blog.csdn.net/YIN_Northwind?spm=1010.2135.3001.5343",
-    ariaLabel: "CSDN",
-    title: "CSDN",
-    svg: "csdn",
+    href: "https://www.zhihu.com/people/yinph",
+    ariaLabel: "知乎",
+    title: "知乎",
+    svg: "zhihu",
   },
 ];
