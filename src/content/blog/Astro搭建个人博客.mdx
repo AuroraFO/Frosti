@@ -3,13 +3,11 @@ title: Astro搭建个人博客
 description: 该博客会详细介绍如何使用Cloudflare和Netlify来进行个人博客的部署。（保姆级教程！）
 date: 08 28 2024
 pubDate: 08 28 2024
-image: https://pic.imgdb.cn/item/66ceb3e8d9c307b7e938bd74.jpg
+image: https://pic.imgdb.cn/item/66cec50ad9c307b7e94d8e24.png
 categories:
   - tech
 tags:
   - Astro
-  - Cloudflare
-  - Netlify
 badge: 置顶
 ---
 
@@ -31,23 +29,24 @@ import LinkCard from "../../components/page/LinkCard.astro";
 
 大家好，我是Yinph。
 
-我们直接进入正题：
+今天给大家带来一篇关于如何使用Astro快速搭建个人博客的文章。
+
+直接进入正题：
 
 ## 一、准备工作
 
 - 在<a href="https://astro.build/themes/">Astro</a>挑选一个自己心仪的博客模板
 - 安装<a href="https://nodejs.cn/">nodejs</a>
-- 一个<a href="https://github.com/">GitHub</a>账号，并建一个仓库（New repository）
+- 一个<a href="https://github.com/">GitHub</a>账号，并建一个仓库
 - 一个<a href="https://dash.cloudflare.com/">Cloudflare</a>账号
 - 一个<a href="https://www.netlify.com/">Netlify</a>账号
 - 最好下载<a href="https://code.visualstudio.com/">VS Code</a>，方便以后修改博客
 
+<Warning>Astro每个主题就是一个项目，为了避免频繁迁移项目，请先选好自己要使用的主题。</Warning>
 
 ## 二、下载代码并配置
 
-在Astro，我们可以看到很多博客模板。这里我挑了Frosti来使用，并作为例子给大家介绍一下。
-
-在里面，我们搜索一下就能看到Frosti了。
+在Astro，我们可以看到很多博客模板。这里我挑了<a href="https://astro.build/themes/details/frosti/">Frosti</a>来使用，并作为例子给大家介绍一下。
 
 ![Frosti](https://s3.bmp.ovh/imgs/2024/08/28/868cd18a7a788f27.png)
 
@@ -89,10 +88,10 @@ npm run dev
 
 以下是一般需要修改的文件：
 
-- src/const.ts 常量、配置文件
-- src/content/blog 博客所在的文件夹
-- src/pages/ 页面所在的文件夹（如Home, About等等）
-- public/profile.webp 头像图片
+- `src/const.ts` 常量、配置文件
+- `src/content/blog` 博客所在的文件夹
+- `src/pages/` 页面所在的文件夹（如Home, About等等）
+- `public/profile.webp` 头像图片
 
 ## 三、上传至Github仓库
 
