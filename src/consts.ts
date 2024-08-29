@@ -23,7 +23,7 @@ export const infoTest = {
   tagPage: "标签 - ",
   noCategory: "uncategorized",
   categoryCard: "分类",
-  categoryPage: "分类 -  ",
+  categoryPage: "分类 /  ",
   link: "Link: ",
   prevPage: "上一页",
   nextPage: "下一页",
@@ -50,7 +50,7 @@ export const menuItems = [
       {
         id: "tech",
         text: "技术博客",
-        href: "/blog/categories/tech",
+        href: "/blog/categories/技术Tech",
         svg: "cube",
         target: "_self",
       }, // Technology category
