@@ -15,7 +15,7 @@ import SwupParallelPlugin from '@swup/parallel-plugin';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://frosti.saroprock.com',
+  site: 'https://yinph.netlify.app/',
   style: {
     scss: {
       includePaths: ['./src/styles']
