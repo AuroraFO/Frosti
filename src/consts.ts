@@ -13,21 +13,6 @@ export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
 export const SERVER_URL = "https://demo.saroprock.com";
-export const TRANSITION_API = true;
-
-// Some informative text on the site
-export const infoTest = {
-  tag: "Tag: ",
-  noTag: "untagged",
-  tagCard: "标签",
-  tagPage: "标签 - ",
-  noCategory: "uncategorized",
-  categoryCard: "分类",
-  categoryPage: "分类 /  ",
-  link: "Link: ",
-  prevPage: "上一页",
-  nextPage: "下一页",
-};
 
 // Menu items for navigation
 export const menuItems = [
