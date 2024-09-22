@@ -9,8 +9,8 @@ import { t } from "i18next";
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   const posts = await getCollection("blog");
-  const topPosts = posts.filter((post) => post.data.badge === "Pin");
-  const otherPosts = posts.filter((post) => post.data.badge !== "Pin");
+  const topPosts = posts.filter((post) => post.data.badge === "置顶");
+  const otherPosts = posts.filter((post) => post.data.badge !== "置顶");
 
   topPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
   otherPosts.sort(
@@ -22,7 +22,7 @@ export async function getStaticPaths({ paginate }: { paginate: any }) {
   // 获取统计信息
   const postsWithStats = await Promise.all(
     sortedPosts.map(async (post) => {
-      const { Content, remarkPluginFrontmatter } = await post.render();
+      const { remarkPluginFrontmatter } = await post.render();
 
       // 将统计信息添加到 post 数据中
       return {
@@ -69,7 +69,7 @@ const totalPages = Math.ceil(page.total / page.size);
 const pageLinks = generatePageLinks(totalPages);
 ---
 
-<BaseLayout title="Blog">
+<BaseLayout title="博客">
   <BaseCard title="search">
     <Search
       id="search"

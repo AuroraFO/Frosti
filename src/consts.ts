@@ -9,6 +9,7 @@ export const DATE_FORMAT = "ddd MMM DD YYYY";
 
 // User profile information
 export const USER_NAME = "Yinph";
+export const USER_SITE = "https://yinph.netlify.app/"
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
